@@ -1,4 +1,4 @@
-package walletmix.com.qrcodescannertest;
+package walletmix.com.walletmixpayment;
 
 import org.junit.Test;
 

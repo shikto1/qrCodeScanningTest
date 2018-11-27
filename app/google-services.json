@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1041071851784",
+    "firebase_url": "https://walletmix-project.firebaseio.com",
+    "project_id": "walletmix-project",
+    "storage_bucket": "walletmix-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041071851784:android:efc09652c1eccd7c",
+        "android_client_info": {
+          "package_name": "walletmix.com.walletmixpayment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041071851784-g8pdis06jgaj8jfgep943bghi9420i8c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4xVN2vyX9WGgQEnS9VMyqfrh56KiULQM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

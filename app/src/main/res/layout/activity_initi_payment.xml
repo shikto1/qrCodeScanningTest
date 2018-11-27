@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="walletmix.com.walletmixpayment.ui.InitPaymentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/xxLargePadding"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_amount_in_bdt"
+            android:textSize="@dimen/smallText"/>
+
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_one"
+            android:hint="@string/enter_amount"
+            android:textColor="@color/colorPrimary"
+            android:padding="10dp"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/mediumText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shipping Address (Optional)"
+            android:textSize="@dimen/smallText"
+            android:layout_marginTop="6dp"
+            tools:ignore = "HardCodedText"/>
+
+        <EditText
+            android:id="@+id/et_shipping_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_one"
+            tools:ignore = "HardCodedText"
+            android:padding="10dp"
+            android:inputType="text"
+            android:lines="3"
+            android:hint="@string/hint_enter_shipping_address"
+            android:textSize="@dimen/mediumText"
+            android:gravity="start"/>
+
+        <CheckBox
+            android:id="@+id/emi_checkbox"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMI Payment"
+            tools:ignore= "HardCodedText"
+            android:textSize="@dimen/smallText"/>
+
+        <LinearLayout
+            android:id="@+id/emi_panel"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/emi_bank_list_spinner"
+                android:background="@drawable/back_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="50dp"/>
+
+            <Spinner
+                android:id="@+id/emi_period_spinner"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/back_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="50dp"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/go_to_payment_gateway_btn"
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="PAY NOW"
+            tools:ignore = "HardCodedText"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

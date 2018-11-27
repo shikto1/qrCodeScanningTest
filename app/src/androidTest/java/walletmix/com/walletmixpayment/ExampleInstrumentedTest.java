@@ -1,4 +1,4 @@
-package walletmix.com.qrcodescannertest;
+package walletmix.com.walletmixpayment;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

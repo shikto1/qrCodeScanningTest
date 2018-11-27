@@ -1,3 +1,42 @@
+<!DOCTYPE resources [<!ENTITY appname "Walletmix Payment">]>
 <resources>
-    <string name="app_name">QrCodeScannerTest</string>
+    <string name="app_name">&appname;</string>
+
+    <string name="login_button_facebook">Login with Facebook</string>
+    <string name="login_button_gmail">Login with Google</string>
+
+    <string name="facebook_app_id">1017715448436876</string>
+    <string name="fb_login_protocol_scheme">fb1017715448436876</string>
+
+    <!--Runtime Permission-->
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_camera_denied_one">To scan merchants QR Code allow &appname; access to your camera.</string>
+    <string name="permission_camera_denied_two">To scan merchants QR Code &appname; access to your camera. Tap Settings > App permissions and turn Camera on.</string>
+
+    <string name="button_not_now">NOT NOW</string>
+    <string name="buttoin_continue">CONTINUE</string>
+    <string name="button_settings">SETTINGS</string>
+
+
+    <string name="hint_enter_email">Enter email</string>
+    <string name="hint_enter_pass">Enter password</string>
+    <string name="button_login">Login</string>
+    <string name="text_or">OR</string>
+    <string name="text_new_user">New User ?</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="sign_up_with_google">Sign Up with Google</string>
+    <string name="hint_enter_phone_number">Enter phone number</string>
+    <string name="hint_enter_full_name">Enter full name</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="title_amount_in_bdt">Amount (in BDT)</string>
+    <string name="hint_enter_shipping_address">Enter shipping address</string>
+
+    <string-array name="emi_periods">
+        <item>Select your EMI period</item>
+        <item>3 Months</item>
+        <item>6 Months</item>
+        <item>9 Months</item>
+        <item>12 Months</item>
+    </string-array>
+
 </resources>

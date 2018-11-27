@@ -1,22 +1,64 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "walletmix.com.qrcodescannertest"
+        applicationId "walletmix.com.walletmixpayment"
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            useProguard true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
+
+
+ext {
+    minSdkVersion = 16
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+
+    supportLibraryVersion = '27.1.1'
+    constraintLayoutVersion = '1.1.3'
+    fireBaseVVersion = '11.8.0'
+    playServiceVersion = '11.8.0'
+    butterKnifeVersion = '8.8.1'
+    retrofitVersion = '2.4.0'
+    retrofitLogginInterceptor = '3.8.0'
+    eventuBusVersion = '3.1.1'
+    junitVersion = '4.12'
+    testRunnerVersion = '1.0.2'
+    espressoVersion = '3.0.2'
+    picassoVersion = '2.5.2'
+    okhttpVersion = '2.4.0'
+    volleyVersion = '1.1.0'
+    circleImageViewVersion = '2.2.0'
+    daggerVersion = '2.12'
+    rxJavaVersion = '2.1.9'
+    rxAndroidVersion = '2.0.1'
+    rxAdapterVersion = '2.2.0'
+    facebookShareSDKVersion = '[4,5)'
+    betterSpinnerVersion = '1.1.0'
+    pickerViewVersion = '1.1'
+    pinViewVersion = '1.5.3'
+    bottomSheetLibVersion = '1.2.3'
+    aviLoadingVersion = '2.1.3'
+}
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -26,6 +68,30 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    // QR_Code Scanner........
     compile('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }
     compile 'com.google.zxing:core:3.3.0'
+    compile 'me.dm7.barcodescanner:zxing:1.9.8'
+
+    //Facebook
+    implementation 'com.facebook.android:facebook-login:4.38.1'
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.google.firebase:firebase-auth:11.8.0'
+    implementation 'com.google.android.gms:play-services-auth:11.8.0'
+    implementation 'com.google.firebase:firebase-database:11.8.0'
+
+    // Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.4.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
+    // WPG Library
+    compile(name: 'walletmixopglibrary', ext: 'aar')
+    compile 'com.android.volley:volley:1.1.0'
+
+    //ButterKnife
+    implementation "com.jakewharton:butterknife:$butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+
 }
+apply plugin: 'com.google.gms.google-services'

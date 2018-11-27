@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="walletmix.com.walletmixpayment.ui.QRCodeScannerActivity">
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:id="@+id/zxing_qr_code_scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/scanner_text"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="50dp"
+        android:padding="18dp"
+        android:text="Scan Merchant's QR code for Payment"
+        tools:ignore = "HardCodedText"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</RelativeLayout>
