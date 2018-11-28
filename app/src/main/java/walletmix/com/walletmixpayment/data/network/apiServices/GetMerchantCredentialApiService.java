@@ -3,6 +3,7 @@ import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
+import walletmix.com.walletmixpayment.data.network.apiResponses.GetMerchantCredentialResponse;
 import walletmix.com.walletmixpayment.data.network.utils.API;
 
 public interface GetMerchantCredentialApiService {

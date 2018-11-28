@@ -10,7 +10,6 @@ import walletmix.com.walletmixpayment.utils.Navigator;
 public class GatewayCallbackActivity extends BaseActivity {
 
     String responseTxnStatus,responseWmxId;
-    Navigator navigator;
 
     @Override
     protected int getContentView() {
@@ -56,7 +55,7 @@ public class GatewayCallbackActivity extends BaseActivity {
 
             @Override
             public void onPositiveBtnClicked() {
-                navigator.navigateToHomeByFinishingall(GatewayCallbackActivity.this);
+                mNavigator.navigateToHomeByFinishingall(GatewayCallbackActivity.this);
 
             }
         });

@@ -3,7 +3,7 @@
     <string name="app_name">&appname;</string>
 
     <string name="login_button_facebook">Login with Facebook</string>
-    <string name="login_button_gmail">Login with Google</string>
+    <string name="login_button_gmail">Sign in with Google</string>
 
     <string name="facebook_app_id">1017715448436876</string>
     <string name="fb_login_protocol_scheme">fb1017715448436876</string>
@@ -20,7 +20,7 @@
 
     <string name="hint_enter_email">Enter email</string>
     <string name="hint_enter_pass">Enter password</string>
-    <string name="button_login">Login</string>
+    <string name="button_login">Sign In</string>
     <string name="text_or">OR</string>
     <string name="text_new_user">New User ?</string>
     <string name="button_sign_up">Sign Up</string>
@@ -30,6 +30,9 @@
     <string name="enter_amount">Enter amount</string>
     <string name="title_amount_in_bdt">Amount (in BDT)</string>
     <string name="hint_enter_shipping_address">Enter shipping address</string>
+    <string name="button_next">Done</string>
+    <string name="hint_enter_address">Enter address</string>
+    <string name="button_log_out">LOG OUT</string>
 
     <string-array name="emi_periods">
         <item>Select your EMI period</item>

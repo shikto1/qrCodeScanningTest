@@ -1,4 +1,19 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -75,10 +90,11 @@ dependencies {
 
     //Facebook
     implementation 'com.facebook.android:facebook-login:4.38.1'
-    implementation 'com.google.firebase:firebase-core:11.8.0'
-    implementation 'com.google.firebase:firebase-auth:11.8.0'
-    implementation 'com.google.android.gms:play-services-auth:11.8.0'
-    implementation 'com.google.firebase:firebase-database:11.8.0'
+    implementation "com.google.firebase:firebase-core:$fireBaseVVersion"
+    implementation "com.google.firebase:firebase-auth:$fireBaseVVersion"
+    implementation "com.google.android.gms:play-services-auth:$fireBaseVVersion"
+    implementation "com.google.firebase:firebase-database:$fireBaseVVersion"
+    implementation "com.google.firebase:firebase-messaging:$fireBaseVVersion"
 
     // Retrofit
     compile 'com.squareup.retrofit2:retrofit:2.4.0'
@@ -92,6 +108,9 @@ dependencies {
     //ButterKnife
     implementation "com.jakewharton:butterknife:$butterKnifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+    compile('com.crashlytics.sdk.android:crashlytics:2.9.6@aar') {
+        transitive = true;
+    }
 
 }
 apply plugin: 'com.google.gms.google-services'

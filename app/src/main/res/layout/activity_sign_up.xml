@@ -15,6 +15,9 @@
             android:id="@+id/et_full_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:maxLength="30"
             android:hint="@string/hint_enter_full_name" />
 
         <EditText
@@ -22,6 +25,8 @@
             android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:maxLength="30"
             android:hint="@string/hint_enter_email" />
 
         <EditText
@@ -29,13 +34,18 @@
             android:inputType="phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:maxLength="11"
             android:hint="@string/hint_enter_phone_number"/>
+
 
         <EditText
             android:id="@+id/et_password"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:maxLines="1"
             android:hint="@string/hint_enter_pass"/>
 
         <Button
@@ -61,6 +71,10 @@
             android:layout_marginTop="@dimen/xxxLargeMargin"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_height"
+            android:drawableLeft="@mipmap/google_icon"
+            android:drawableStart="@mipmap/google_icon"
+            android:paddingLeft="@dimen/normalMargin"
+            android:paddingRight="@dimen/normalMargin"
             android:text="@string/sign_up_with_google" />
 
     </LinearLayout>

@@ -56,8 +56,11 @@
             android:background="@drawable/back_one"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_height"
+            android:drawableLeft="@mipmap/google_icon"
+            android:drawableStart="@mipmap/google_icon"
+            android:paddingLeft="@dimen/normalMargin"
+            android:paddingRight="@dimen/normalMargin"
             android:text="@string/login_button_gmail"/>
-
 
         <LinearLayout
             android:layout_width="match_parent"

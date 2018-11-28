@@ -18,10 +18,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import walletmix.com.walletmixpayment.R;
 import walletmix.com.walletmixpayment.base.BaseActivity;
-import walletmix.com.walletmixpayment.data.network.apiResponses.GetMerchantCredentialApiService;
-import walletmix.com.walletmixpayment.data.network.apiServices.GetMerchantCredentialResponse;
+import walletmix.com.walletmixpayment.data.network.apiResponses.GetMerchantCredentialResponse;
+import walletmix.com.walletmixpayment.data.network.apiServices.GetMerchantCredentialApiService;
 import walletmix.com.walletmixpayment.data.pref.Key;
-import walletmix.com.walletmixpayment.data.network.utils.NetworkUtils;
 import walletmix.com.walletmixpayment.data.network.utils.ServiceGenerator;
 
 
@@ -84,7 +83,7 @@ public class QRCodeScannerActivity extends BaseActivity implements ZXingScannerV
     @Override
     public void handleResult(Result result) {
         String merchantId = result.getText();
-        if (NetworkUtils.isNetworkAvailable(this)) {
+        if (networkUtils.isNetworkAvailable()) {
             loadMerchantCredentials(merchantId);
         } else {
             Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
@@ -98,6 +97,8 @@ public class QRCodeScannerActivity extends BaseActivity implements ZXingScannerV
             final String wmxId = new String(Base64.decode(merchantId, Base64.DEFAULT));
             if (!wmxId.toLowerCase().startsWith("wmx")) {
                 Toast.makeText(this, "QR Code is not valid.", Toast.LENGTH_SHORT).show();
+                qrCodeScannerView.startCamera();
+                qrCodeScannerView.setResultHandler(this);
                 return;
             }
             final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -144,6 +145,8 @@ public class QRCodeScannerActivity extends BaseActivity implements ZXingScannerV
             });
         } catch (Exception e) {
             Toast.makeText(this, "QR Code is not valid.", Toast.LENGTH_SHORT).show();
+            qrCodeScannerView.startCamera();
+            qrCodeScannerView.setResultHandler(this);
         }
 
     }

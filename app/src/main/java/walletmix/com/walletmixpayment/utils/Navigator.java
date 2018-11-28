@@ -16,6 +16,7 @@ public class Navigator {
         Intent i = new Intent(from, LoginActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         from.startActivity(i);
+        ((AppCompatActivity)from).overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
     }
 
    // public void navigateToForgotPass(Context from){navigateTo(from,ForgotPasswordActivity.class);}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="walletmix.com.walletmixpayment.ui.ExtraInfoForSignUpActivity">
+
+
+    <EditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_enter_phone_number"
+        android:layout_margin="40dp"
+        android:layout_centerInParent="true"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/sign_up_done_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/xxxLargeMargin"
+        android:layout_marginTop="@dimen/xxxLargeMargin"
+        android:background="@drawable/button_background"
+        android:text="@string/button_next"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
